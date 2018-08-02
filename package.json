@@ -1,0 +1,59 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "test": "vue-cli-service test:unit",
+    "cz": "git-cz",
+    "cmt": "run-s lint-staged cz",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{scss,js,vue}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.{scss,vue}": [
+      "stylelint --fix --cache --cache-location '.stylelintcache'",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "vue": "^2.5.16",
+    "vue-mq": "^0.2.1",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-rc.5",
+    "@vue/cli-plugin-eslint": "^3.0.0-rc.5",
+    "@vue/cli-plugin-unit-jest": "^3.0.0-rc.5",
+    "@vue/cli-service": "^3.0.0-rc.5",
+    "@vue/eslint-config-airbnb": "^3.0.0-rc.9",
+    "@vue/eslint-config-prettier": "^3.0.0-rc.9",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.0.1",
+    "commitizen": "^2.10.1",
+    "css-loader": "^1.0.0",
+    "cz-cli": "^1.0.0",
+    "husky": "^0.14.3",
+    "jest-serializer-vue": "^2.0.2",
+    "lint-staged": "^7.2.0",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.3",
+    "prettier": "^1.14.0",
+    "sass-loader": "^7.0.1",
+    "stylelint": "^9.4.0",
+    "stylelint-config-prettier": "^3.3.0",
+    "stylelint-config-recess-order": "^2.0.0",
+    "stylelint-config-sass-guidelines": "^5.0.0",
+    "vue-template-compiler": "^2.5.16"
+  }
+}
