@@ -1,44 +1,20 @@
 <template>
-  <div>
-    <p>{{message}}</p>
-    <EditForm />
-    {{$mq}}
-    <transition appear>
-      <div v-if="$mq === 'mobile'">
-        aaaaa
+  <div id="app">
+    <the-header />
+    <main>
+      <div class="container">
+        <router-view />    
       </div>
-    </transition>
-
-    <transition appear>
-      <mq-layout mq="desktop"> only desktop </mq-layout>
-    </transition>
-
+    </main>
   </div>
 </template>
 
 <script>
-import EditForm from '@/components/EditForm.vue';
+import TheHeader from '@/components/TheHeader.vue';
 
 export default {
   components: {
-    EditForm
-  },
-  computed: {
-    message() {
-      return this.$store.getters['EditForm/message'];
-    }
+    TheHeader
   }
 };
 </script>
-
-<style>
-.v-enter-active,
-.v-leave-active {
-  transition: 1s;
-}
-
-.v-enter,
-.v-leave-to {
-  opacity: 0;
-}
-</style>

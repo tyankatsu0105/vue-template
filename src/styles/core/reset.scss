@@ -125,11 +125,6 @@ select::-ms-expand {
   display: none;
 }
 
-/* origin style*/
-.js--is-tab-focus {
-  outline: 3px solid rgba(158, 158, 158, 0.5);
-}
-
 /* Remove the stupid outer glow in Webkit */
 input:focus {
   // outline:0;

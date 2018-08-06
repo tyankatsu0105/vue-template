@@ -30,5 +30,17 @@ img {
 }
 
 button {
+  cursor: pointer;
   transition: $tst-default;
+}
+
+input,
+label,
+select,
+button,
+textarea {
+  transition: $tst-default;
+  &:focus {
+    box-shadow: $box-shadow-default;
+  }
 }
