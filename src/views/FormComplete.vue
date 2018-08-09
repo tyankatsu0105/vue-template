@@ -1,33 +1,45 @@
 <template>
-  <div>
-    <transition-group appear>
-      <h1 class="main-heading" key="heading">{{title}}</h1>
+	<div>
+		<transition-group appear>
+			<h1 
+				key="heading" 
+				class="main-heading">{{title}}</h1>
 
-      <section class="section-gutter" key="section">
-        <div class="container">
-          <p>
-            お問い合わせありがとうございます。<br>
-            引き続き株式会社ほうれん草をよろしくお願いいたします。
-          </p>
+			<section 
+				key="section" 
+				class="section-gutter">
+				<div class="container">
+					<p>
+						お問い合わせありがとうございます。<br>
+						引き続き株式会社ほうれん草をよろしくお願いいたします。
+					</p>
 
-          <div class="button-box">
-            <router-link to="/" class="button">
-              トップに戻る
-            </router-link>
-          </div>
-        </div>
-    </section>
-    </transition-group>
-  </div>
+					<div class="button-box">
+						<router-link 
+							to="/" 
+							class="button">
+							トップに戻る
+						</router-link>
+					</div>
+				</div>
+			</section>
+		</transition-group>
+	</div>
 </template>
 
 <script>
 export default {
-  name: 'home',
   data() {
     return {
       title: '送信完了'
     };
+  },
+  head: {
+    title: function() {
+      return {
+        inner: this.title
+      };
+    }
   }
 };
 </script>

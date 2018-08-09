@@ -1,67 +1,95 @@
 <template>
-  <transition-group appear>
-      <h1 class="main-heading" key="heading">{{title}}</h1>
+	<transition-group appear>
+		<h1 
+			key="heading" 
+			class="main-heading">{{title}}</h1>
     
-    <section class="section-gutter" key="section">
-      <div class="container">
-        <form name="form">
-          <dl class="form-contents-list">
-            <div class="form-contents-list__item">
-              <dt class="form-contents-list__heading">
-                氏名
-                <span class="form-contents-list__heading-label -require">必須</span>
-              </dt>
-              <dd class="form-contents-list__data">
-                <div class="form-contents-list__data-contents-box input-width-small">
-                  <input class="input-width-small" type="text" :value='name1' disabled>
-                </div>
-                <div class="input-width-small">
-                  <input class="input-width-small" type="text" :value='name2' disabled>
-                </div>
-              </dd>
-            </div>
-            <div class="form-contents-list__item">
-              <dt class="form-contents-list__heading">
-                年齢
-                <span class="form-contents-list__heading-label -require">必須</span>
-              </dt>
-              <dd class="form-contents-list__data">
-                <div class="form-contents-list__data-contents-box">
-                  <input type="number" :value='age' disabled>
-                </div>
-              </dd>
-            </div>
-            <div class="form-contents-list__item">
-              <dt class="form-contents-list__heading">
-                メールアドレス
-                <span class="form-contents-list__heading-label -require">必須</span>
-              </dt>
-              <dd class="form-contents-list__data">
-                <div class="form-contents-list__data-contents-box">
-                  <input type="email" :value='email' disabled>
-                </div>
-              </dd>
-            </div>
-            <div class="form-contents-list__item">
-              <dt class="form-contents-list__heading">
-                お問い合わせ内容
-                <span class="form-contents-list__heading-label -require">必須</span>
-              </dt>
-              <dd class="form-contents-list__data">
-                <div class="form-contents-list__data-contents-box">
-                  <textarea cols="30" rows="10" disabled v-model="textarea"></textarea>
-                </div>
-              </dd>
-            </div>
-          </dl>
-          <div class="button-box">
-            <button type="button" @click="back">戻る</button>
-            <button type="button" @click="submit">送信</button>
-          </div>
-        </form>
-      </div>
-    </section>
-    </transition-group>
+		<section 
+			key="section" 
+			class="section-gutter">
+			<div class="container">
+				<form name="form">
+					<dl class="form-contents-list">
+						<div class="form-contents-list__item">
+							<dt class="form-contents-list__heading">
+								氏名
+								<span class="form-contents-list__heading-label -require">必須</span>
+							</dt>
+							<dd class="form-contents-list__data">
+								<div class="form-contents-list__data-contents-box input-width-small">
+									<input 
+										:value='name1' 
+										class="input-width-small" 
+										type="text" 
+										disabled>
+								</div>
+								<div class="input-width-small">
+									<input 
+										:value='name2' 
+										class="input-width-small" 
+										type="text" 
+										disabled>
+								</div>
+							</dd>
+						</div>
+						<div class="form-contents-list__item">
+							<dt class="form-contents-list__heading">
+								年齢
+								<span class="form-contents-list__heading-label -require">必須</span>
+							</dt>
+							<dd class="form-contents-list__data">
+								<div class="form-contents-list__data-contents-box">
+									<input 
+										:value='age' 
+										type="number" 
+										disabled>
+								</div>
+							</dd>
+						</div>
+						<div class="form-contents-list__item">
+							<dt class="form-contents-list__heading">
+								メールアドレス
+								<span class="form-contents-list__heading-label -require">必須</span>
+							</dt>
+							<dd class="form-contents-list__data">
+								<div class="form-contents-list__data-contents-box">
+									<input 
+										:value='email' 
+										type="email" 
+										disabled>
+								</div>
+							</dd>
+						</div>
+						<div class="form-contents-list__item">
+							<dt class="form-contents-list__heading">
+								お問い合わせ内容
+								<span class="form-contents-list__heading-label -require">必須</span>
+							</dt>
+							<dd class="form-contents-list__data">
+								<div class="form-contents-list__data-contents-box">
+									<textarea 
+										v-model="textarea" 
+										cols="30" 
+										rows="10" 
+										disabled>
+									</textarea>
+								</div>
+							</dd>
+						</div>
+					</dl>
+					<div class="button-box">
+						<button 
+							type="button" 
+							@click="back">戻る</button>
+						<button 
+							type="button" 
+							@click="submit">送信</button>
+					</div>
+				</form>
+			</div>
+		</section>
+	</transition-group>
+  
 </template>
 
 <script>
@@ -177,6 +205,10 @@ button {
 }
 input,
 textarea {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 300px;
   padding: 5px;
   border: 1px solid #ccc;

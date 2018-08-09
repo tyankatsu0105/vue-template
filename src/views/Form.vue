@@ -1,73 +1,101 @@
 <template>
-  <div>
-    <transition-group appear>
-      <h1 class="main-heading" key="heading">{{title}}</h1>
+	<div>
+		<transition-group appear>
+			<h1 
+				key="heading" 
+				class="main-heading">{{title}}</h1>
     
-    <section class="section-gutter" key="section">
-      <div class="container">
-        <form name="form">
-          <dl class="form-contents-list">
-            <div class="form-contents-list__item">
-              <dt class="form-contents-list__heading">
-                氏名
-                <span class="form-contents-list__heading-label -require">必須</span>
-              </dt>
-              <dd class="form-contents-list__data">
-                <div class="form-contents-list__data-contents-box input-width-small">
-                  <input class="input-width-small" v-model="name1" type="text" required placeholder="山田">
-                  <span>入力されていません</span>
-                </div>
-                <div class="input-width-small">
-                  <input class="input-width-small" v-model="name2" type="text" required placeholder="太郎">
-                  <span>入力されていません</span>
-                </div>
-              </dd>
-            </div>
-            <div class="form-contents-list__item">
-              <dt class="form-contents-list__heading">
-                年齢
-                <span class="form-contents-list__heading-label -require">必須</span>
-              </dt>
-              <dd class="form-contents-list__data">
-                <div class="form-contents-list__data-contents-box">
-                  <input v-model.number="age" type="number" required>
-                  <span>入力されていません。</span>
-                </div>
-              </dd>
-            </div>
-            <div class="form-contents-list__item">
-              <dt class="form-contents-list__heading">
-                メールアドレス
-                <span class="form-contents-list__heading-label -require">必須</span>
-              </dt>
-              <dd class="form-contents-list__data">
-                <div class="form-contents-list__data-contents-box">
-                  <input v-model="email" type="email" required>
-                  <span>入力されていないか、「@」が入っていません。</span>
-                </div>
-              </dd>
-            </div>
-            <div class="form-contents-list__item">
-              <dt class="form-contents-list__heading">
-                お問い合わせ内容
-                <span class="form-contents-list__heading-label -require">必須</span>
-              </dt>
-              <dd class="form-contents-list__data">
-                <div class="form-contents-list__data-contents-box">
-                  <textarea v-model="textarea" cols="30" rows="10" required placeholder="今夜の夕食は何がいいでしょうか？"></textarea>
-                  <span>入力されていません。</span>
-                </div>
-              </dd>
-            </div>
-          </dl>
-          <div class="button-box">
-            <button type="button" @click="judgeRequiredElementsIsEmpty(); sendConfirm();">確認</button>
-          </div>
-        </form>
-      </div>
-    </section>
-    </transition-group>
-  </div>
+			<section 
+				key="section" 
+				class="section-gutter">
+				<div class="container">
+					<form name="form">
+						<dl class="form-contents-list">
+							<div class="form-contents-list__item">
+								<dt class="form-contents-list__heading">
+									氏名
+									<span class="form-contents-list__heading-label -require">必須</span>
+								</dt>
+								<dd class="form-contents-list__data">
+									<div class="form-contents-list__data-contents-box input-width-small">
+										<input 
+											v-model="name1" 
+											class="input-width-small" 
+											type="text" 
+											required 
+											placeholder="山田">
+										<span>入力されていません</span>
+									</div>
+									<div class="input-width-small">
+										<input 
+											v-model="name2" 
+											class="input-width-small" 
+											type="text" 
+											required 
+											placeholder="太郎">
+										<span>入力されていません</span>
+									</div>
+								</dd>
+							</div>
+							<div class="form-contents-list__item">
+								<dt class="form-contents-list__heading">
+									年齢
+									<span class="form-contents-list__heading-label -require">必須</span>
+								</dt>
+								<dd class="form-contents-list__data">
+									<div class="form-contents-list__data-contents-box">
+										<input 
+											v-model.number="age" 
+											type="number" 
+											required>
+										<span>入力されていません。</span>
+									</div>
+								</dd>
+							</div>
+							<div class="form-contents-list__item">
+								<dt class="form-contents-list__heading">
+									メールアドレス
+									<span class="form-contents-list__heading-label -require">必須</span>
+								</dt>
+								<dd class="form-contents-list__data">
+									<div class="form-contents-list__data-contents-box">
+										<input 
+											v-model="email" 
+											type="email" 
+											required>
+										<span>入力されていないか、「@」が入っていません。</span>
+									</div>
+								</dd>
+							</div>
+							<div class="form-contents-list__item">
+								<dt class="form-contents-list__heading">
+									お問い合わせ内容
+									<span class="form-contents-list__heading-label -require">必須</span>
+								</dt>
+								<dd class="form-contents-list__data">
+									<div class="form-contents-list__data-contents-box">
+										<textarea 
+											v-model="textarea" 
+											cols="30" 
+											rows="10" 
+											required 
+											placeholder="今夜の夕食は何がいいでしょうか？">
+										</textarea>
+										<span>入力されていません。</span>
+									</div>
+								</dd>
+							</div>
+						</dl>
+						<div class="button-box">
+							<button 
+								type="button" 
+								@click="judgeRequiredElementsIsEmpty(); sendConfirm();">確認</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</transition-group>
+	</div>
 </template>
 
 <script>

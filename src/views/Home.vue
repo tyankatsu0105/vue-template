@@ -1,11 +1,15 @@
 <template>
-  <div>
-    <transition appear>
-      <h1 class="main-heading">{{title}}</h1>
-    </transition>
+	<div>
+		<transition appear>
+			<h1 class="main-heading">{{title}}</h1>
+		</transition>
 
-    <img src="@/assets/spinach.jpg" @load='loaded = true' :class="{show: loaded}" alt="">
-  </div>
+		<img 
+			:class="{show: loaded}" 
+			src="@/assets/spinach.jpg" 
+			alt="" 
+			@load='loaded = true'>
+	</div>
 </template>
 
 <script>

@@ -1,21 +1,23 @@
 <template>
-  <header class="global-header">
-    <div class="container">
-      <nav class="global-nav">
-        <ul class="global-nav-list">
-          <li class="global-nav-list__item">
-            <router-link to='/'>Home</router-link>
-          </li>
-          <li class="global-nav-list__item">
-            <router-link to='/about'>About</router-link>
-          </li>
-          <li class="global-nav-list__item">
-            <router-link to='/form'>Form</router-link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+	<header class="global-header">
+		<div class="container">
+			<nav class="global-nav">
+				<ul class="global-nav-list">
+					<li class="global-nav-list__item">
+						<router-link 
+							to='/' 
+							exact>Home</router-link>
+					</li>
+					<li class="global-nav-list__item">
+						<router-link to='/about'>About</router-link>
+					</li>
+					<li class="global-nav-list__item">
+						<router-link to='/form'>Form</router-link>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 </template>
 
 <script>
@@ -55,7 +57,7 @@ export default {
       transition: background-color $tst-heavy;
     }
   }
-  .router-link-exact-active {
+  .router-link-active {
     &::after {
       background-color: #f00;
       opacity: 1;
