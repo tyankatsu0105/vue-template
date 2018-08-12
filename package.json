@@ -10,19 +10,28 @@
     "lint:script": "vue-cli-service lint",
     "lint:style": "stylelint src/**/*.scss src/**/*.vue --fix --cache --cache-location '.stylelintcache'",
     "lint": "run-s lint:script lint:style",
-    "precommit": "run-s lint-staged cz",
-    "cz": "git-cz",
-    "lint-staged": "lint-staged"
+    "commit": "git-cz",
+    "precommit": "lint-staged"
   },
   "lint-staged": {
-    "src/**/*.{js,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ],
-    "src/**/*.{scss,vue}": [
-      "stylelint --fix --cache --cache-location '.stylelintcache'",
-      "git add"
+    "linters": {
+      "*.{js,vue}": [
+        "vue-cli-service lint",
+        "git add"
+      ],
+      "*.{scss,vue}": [
+        "stylelint --fix --cache --cache-location '.stylelintcache'",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "node_modules"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./cz-custom"
+    }
   },
   "dependencies": {
     "register-service-worker": "^1.4.1",
@@ -48,7 +57,6 @@
     "commitizen": "^2.10.1",
     "css-loader": "^1.0.0",
     "cz-cli": "^1.0.0",
-    "husky": "^0.14.3",
     "jest-serializer-vue": "^2.0.2",
     "lint-staged": "^7.2.0",
     "node-sass": "^4.9.3",
