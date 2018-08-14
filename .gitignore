@@ -23,5 +23,5 @@ yarn-error.log*
 *.sln
 *.sw*
 
-# user origin
+# origin
 .stylelintcache

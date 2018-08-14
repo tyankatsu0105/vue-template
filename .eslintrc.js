@@ -29,7 +29,6 @@ module.exports = {
         "allowFirstLine": false
       }
     }]
-
   },
   parserOptions: {
     parser: 'babel-eslint'
