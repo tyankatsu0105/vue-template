@@ -1,12 +1,19 @@
 module.exports = {
-  plugins: [
-    'cypress'
-  ],
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
   env: {
-    mocha: true,
-    'cypress/globals': true
+    node: true,
+    jest: true,
+    browser: true,
+  },
+  globals: {
+    page: true,
+    browser: true,
+    jestPuppeteer: true,
   },
   rules: {
-    strict: 'off'
+    'import/no-extraneous-dependencies': 'off'
   }
 }

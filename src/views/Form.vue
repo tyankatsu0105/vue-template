@@ -19,19 +19,21 @@
 								<dd class="form-contents-list__data">
 									<div class="form-contents-list__data-contents-box input-width-small">
 										<input 
+											id="name1" 
 											v-model="name1" 
 											class="input-width-small" 
 											type="text" 
-											required 
+											required
 											placeholder="山田">
 										<span>入力されていません</span>
 									</div>
 									<div class="input-width-small">
 										<input 
+											id="name2" 
 											v-model="name2" 
 											class="input-width-small" 
 											type="text" 
-											required 
+											required
 											placeholder="太郎">
 										<span>入力されていません</span>
 									</div>
@@ -45,8 +47,9 @@
 								<dd class="form-contents-list__data">
 									<div class="form-contents-list__data-contents-box">
 										<input 
+											id="age" 
 											v-model.number="age" 
-											type="number" 
+											type="number"
 											required>
 										<span>入力されていません。</span>
 									</div>
@@ -60,8 +63,9 @@
 								<dd class="form-contents-list__data">
 									<div class="form-contents-list__data-contents-box">
 										<input 
+											id="email" 
 											v-model="email" 
-											type="email" 
+											type="email"
 											required>
 										<span>入力されていないか、「@」が入っていません。</span>
 									</div>
@@ -75,10 +79,11 @@
 								<dd class="form-contents-list__data">
 									<div class="form-contents-list__data-contents-box">
 										<textarea 
+											id="textarea" 
 											v-model="textarea" 
 											cols="30" 
 											rows="10" 
-											required 
+											required
 											placeholder="今夜の夕食は何がいいでしょうか？">
 										</textarea>
 										<span>入力されていません。</span>

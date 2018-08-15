@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
+    "test:e2e": "jest --config tests/e2e/jest.config.js",
     "lint:script": "vue-cli-service lint",
     "lint:style": "stylelint src/**/*.scss src/**/*.vue --fix --cache --cache-location '.stylelintcache'",
     "lint": "run-s lint:script lint:style",
@@ -36,6 +36,9 @@
   "dependencies": {
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.17",
+    "vue-body-class": "^2.0.0-beta.2",
+    "vue-head": "^2.0.12",
+    "vue-mq": "^0.2.1",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
@@ -51,21 +54,23 @@
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.0.1",
+    "babel-preset-env": "^1.7.0",
     "commitizen": "^2.10.1",
     "css-loader": "^1.0.0",
     "cz-cli": "^1.0.0",
+    "jest-image-snapshot": "^2.4.3",
+    "jest-puppeteer": "^3.2.1",
     "jest-serializer-vue": "^2.0.2",
     "lint-staged": "^7.2.2",
     "node-sass": "^4.9.0",
     "npm-run-all": "^4.1.3",
+    "puppeteer": "^1.7.0",
     "sass-loader": "^7.0.1",
     "stylelint": "^9.4.0",
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-config-recess-order": "^2.0.0",
     "stylelint-config-sass-guidelines": "^5.0.0",
-    "vue-body-class": "^2.0.0-beta.2",
-    "vue-head": "^2.0.12",
-    "vue-mq": "^0.2.1",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.17",
+    "webpack-cli": "^3.1.0"
   }
 }
