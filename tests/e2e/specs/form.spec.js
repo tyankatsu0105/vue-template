@@ -19,23 +19,17 @@ describe('form test', () => {
   const inputValue = {
     name1: '山田',
     name2: '太郎',
-    age: 23,
+    age: '23',
     email: 'hogehoge@example.com',
     textarea: 'ほげほげふがふが'
   };
 
-  const expectedInputValue = () => {
-    page.evaluate(inputValue => {
-      document.querySelector('#name1').value = inputValue.name1;
-      document.querySelector('#name2').value = inputValue.name2;
-      document.querySelector('#age').value = inputValue.age;
-      document.querySelector('#email').value = inputValue.email;
-      document.querySelector('#textarea').value = inputValue.textarea;
-    }, inputValue);
-  };
-
   it('success input', async () => {
-    await expectedInputValue();
+    await page.type('#name1', inputValue.name1);
+    await page.type('#name2', inputValue.name2);
+    await page.type('#age', inputValue.age);
+    await page.type('#email', inputValue.email);
+    await page.type('#textarea', inputValue.textarea);
     await page.click('button');
     let pageUrl = await page.url();
     expect(pageUrl).toMatch('http://localhost:8080/form/confirm');
