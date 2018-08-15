@@ -79,9 +79,11 @@
 					</dl>
 					<div class="button-box">
 						<button 
+							id="return"
 							type="button" 
 							@click="back">戻る</button>
 						<button 
+							id="submit"
 							type="button" 
 							@click="submit">送信</button>
 					</div>

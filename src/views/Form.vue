@@ -19,6 +19,7 @@
 								<dd class="form-contents-list__data">
 									<div class="form-contents-list__data-contents-box input-width-small">
 										<input 
+											id="name1"
 											v-model="name1" 
 											class="input-width-small" 
 											type="text" 
@@ -28,6 +29,7 @@
 									</div>
 									<div class="input-width-small">
 										<input 
+											id="name2"
 											v-model="name2" 
 											class="input-width-small" 
 											type="text" 
@@ -45,6 +47,7 @@
 								<dd class="form-contents-list__data">
 									<div class="form-contents-list__data-contents-box">
 										<input 
+											id="age"
 											v-model.number="age" 
 											type="number" 
 											required>
@@ -60,6 +63,7 @@
 								<dd class="form-contents-list__data">
 									<div class="form-contents-list__data-contents-box">
 										<input 
+											id="email"
 											v-model="email" 
 											type="email" 
 											required>
@@ -75,6 +79,7 @@
 								<dd class="form-contents-list__data">
 									<div class="form-contents-list__data-contents-box">
 										<textarea 
+											id="textarea"
 											v-model="textarea" 
 											cols="30" 
 											rows="10" 
