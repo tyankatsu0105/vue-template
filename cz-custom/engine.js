@@ -13,15 +13,15 @@ const filter = function(array) {
 // We use Commonjs here, but ES6 or AMD would do just
 // fine.
 module.exports = function(options) {
-  const types = options.types;
-  const types2 = options.types2;
+  const typesPrefix = options.typesPrefix;
+  const typesEmoji = options.typesEmoji;
 
-  const length = longest(Object.keys(types)).length + 1;
-  const choicesPrefix = map(types, (type, key) => ({
+  const length = longest(Object.keys(typesPrefix)).length + 1;
+  const choicesPrefix = map(typesPrefix, (type, key) => ({
     name: `${rightPad(`${key}:`, length)} ${type.description}`,
     value: key
   }));
-  const choicesEmojiPrefix = map(types2, (type, key) => ({
+  const choicesEmojiPrefix = map(typesEmoji, (type, key) => ({
     name: `${rightPad(`${key}:`, length)} ${type.description}`,
     value: key
   }));
