@@ -142,6 +142,11 @@ module.exports = function(options) {
         const footer = filter([breaking, issues]).join('\n\n');
 
         commit(`${head}\n\n${body}\n\n${footer}`);
+        console.log(`
+======================
+${head}\n\n${body}\n\n${footer}
+======================
+        `)
       });
     }
   };

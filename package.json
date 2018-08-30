@@ -11,27 +11,37 @@
     "lint:style": "stylelint **/*.scss --fix --cache --cache-location '.stylelintcache'",
     "lint": "run-s lint:script lint:style",
     "commit": "git-cz",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "linters": {
-      "*.{js,vue}": [
-        "vue-cli-service lint",
-        "git add"
-      ],
-      "*.{scss,vue}": [
-        "stylelint --fix --cache --cache-location '.stylelintcache'",
-        "git add"
-      ]
-    },
-    "ignore": [
-      "node_modules/**/*"
-    ]
+    "precommit": "lint-staged",
+    "release:major": "changelog -M -u $npm_package_config_changelog && git add CHANGELOG.md && git commit --no-verify -m 'docs(CHANGELOG.md): :bookmark: updated CHANGELOG.md' && npm version major -m 'feat: :tada: updated version' && git push origin && git push origin --tags",
+    "release:minor": "changelog -m -u $npm_package_config_changelog && git add CHANGELOG.md && git commit --no-verify -m 'docs(CHANGELOG.md): :bookmark: updated CHANGELOG.md' && npm version minor -m 'feat: :tada: updated version' && git push origin && git push origin --tags",
+    "release:patch": "changelog -p -u $npm_package_config_changelog && git add CHANGELOG.md && git commit --no-verify -m 'docs(CHANGELOG.md): :bookmark: updated CHANGELOG.md' && npm version patch -m 'feat: :tada: updated version' && git push origin && git push origin --tags"
   },
   "config": {
     "commitizen": {
       "path": "./cz-custom"
     }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.scss": [
+        "prettier --write",
+        "stylelint --fix --cache --cache-location '.stylelintcache'",
+        "git add"
+      ],
+      "*.js": [
+        "prettier --write",
+        "eslint --fix",
+        "git add"
+      ],
+      "*.md": [
+        "prettier --write",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "node_modules/**/*",
+      "cz-custom/**/*"
+    ]
   },
   "dependencies": {
     "lodash.map": "^4.6.0",
