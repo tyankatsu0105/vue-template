@@ -81,5 +81,10 @@
     "stylelint-config-recess-order": "^2.0.0",
     "stylelint-config-sass-guidelines": "^5.0.0",
     "vue-template-compiler": "^2.5.17"
+  },
+  "engines": {
+    "node": "10.9.0",
+    "npm": "*",
+    "yarn": "1.9.4"
   }
 }
