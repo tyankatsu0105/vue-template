@@ -1,3 +1,9 @@
+#### 1.0.1 (2018-08-30)
+
+##### Documentation Changes
+
+* **README.md:**  :memo: readme更新 ([ed7e643a](https://github.com/tyankatsu0105/vue-template/commit/ed7e643ac2c4a3c9dcd4bb71de672d70b444c7c0))
+
 ## 1.0.0 (2018-08-30)
 
 ##### Documentation Changes
