@@ -1,11 +1,7 @@
 /* stylelint-disable selector-no-qualifying-type */
 
 :root {
-  font-size: 10px;
-
-  @include lt-xs {
-    font-size: 8px;
-  }
+  font-size: 62.5%;
 }
 
 body {
