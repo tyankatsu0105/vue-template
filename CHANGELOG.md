@@ -1,3 +1,13 @@
+### 1.1.0 (2018-09-09)
+
+##### New Features
+
+*  :ghost: power-assertの追加途中 ([a0f418d1](https://github.com/tyankatsu0105/vue-template/commit/a0f418d1224a245547e5c64bbe394f787823027c))
+
+##### Performance Improvements
+
+*  :up: power-assertのバージョンアップ ([3c44ad36](https://github.com/tyankatsu0105/vue-template/commit/3c44ad364eea024322a031b12cab905924580f3c))
+
 #### 1.0.1 (2018-08-30)
 
 ##### Documentation Changes
