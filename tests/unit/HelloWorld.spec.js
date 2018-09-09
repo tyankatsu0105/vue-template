@@ -12,13 +12,9 @@ describe('HelloWorld.vue', () => {
     });
 
     // success
-    // assert.equal(wrapper.props().msg, msg, `aaa`);
-    // assert.equal(wrapper.props().msg, msg);
+    assert.equal(wrapper.props().msg, msg);
 
     // fail
-    assert.equal(wrapper.props().msg, 'aaa', `aaa`);
-
-    // fail Message hidden
-    // assert.equal(wrapper.props().msg, 'aaa');
+    assert.equal(wrapper.props().msg, 'aaa');
   });
 });
