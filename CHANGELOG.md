@@ -1,3 +1,9 @@
+#### 1.1.1 (2018-09-16)
+
+##### Performance Improvements
+
+*  :syringe: lint-stagedの対象にvue追加,eslintの設定追加 ([453b28e6](https://github.com/tyankatsu0105/vue-template/commit/453b28e627ded7d7b7c65fd50ee02c120d9ea4cb))
+
 ### 1.1.0 (2018-09-09)
 
 ##### New Features
