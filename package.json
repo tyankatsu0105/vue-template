@@ -29,7 +29,7 @@
         "stylelint --fix --cache --cache-location '.stylelintcache'",
         "git add"
       ],
-      "*.js": [
+      "*.{js,vue}": [
         "prettier --write",
         "eslint --fix",
         "git add"
