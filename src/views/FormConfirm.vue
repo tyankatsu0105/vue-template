@@ -96,6 +96,11 @@
 import { mapState } from 'vuex';
 
 export default {
+  data() {
+    return {
+      title: '送信確認'
+    };
+  },
   computed: {
     ...mapState({
       name1() {
@@ -122,11 +127,6 @@ export default {
     submit() {
       this.$router.push('/form/complete');
     }
-  },
-  data() {
-    return {
-      title: '送信確認'
-    };
   },
   head: {
     title: function() {

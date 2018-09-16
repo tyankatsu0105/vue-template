@@ -100,6 +100,12 @@
 
 <script>
 export default {
+  data() {
+    return {
+      title: 'お問い合わせ',
+      submittabel: false
+    };
+  },
   computed: {
     name1: {
       get() {
@@ -173,12 +179,6 @@ export default {
         this.$router.push('/form/confirm');
       }
     }
-  },
-  data() {
-    return {
-      title: 'お問い合わせ',
-      submittabel: false
-    };
   },
   head: {
     title: function() {
